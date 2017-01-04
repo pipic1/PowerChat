@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "pic.pipic1.powerchat"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        /*
+        Error:Execution failed for task ':app:processDebugManifest'.
+> Manifest merger failed : uses-sdk:minSdkVersion 11 cannot be smaller than version 16 declared in library [com.firebaseui:firebase-ui:0.3.1] C:\Users\ppier\AndroidStudioProjects\projetAndroid\powerchat\app\build\intermediates\exploded-aar\com.firebaseui\firebase-ui\0.3.1\AndroidManifest.xml
+	Suggestion: use tools:overrideLibrary="com.firebase.ui" to force usage
+        * */
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE-FIREBASE.txt'
+        exclude 'META-INF/NOTICE'
+    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.firebase:firebase-client-android:2.3.1'
+    compile 'com.firebaseui:firebase-ui:0.3.1'
+    compile 'com.facebook.android:facebook-android-sdk:4.6.0'
+    compile 'org.twitter4j:twitter4j-core:4.0.2'
+    compile 'com.android.support:support-v4:23.2.0'
+    compile 'com.google.android.gms:play-services-auth:8.4.0'
+    compile 'com.google.android.gms:play-services-location:8.4.0'
+    compile 'com.google.android.gms:play-services-maps:8.4.0'
+}
+/*
+    compile 'com.google.android.gms:play-services-auth:8.3.0'
+    compile 'com.google.android.gms:play-services-location:7.+'
+ */

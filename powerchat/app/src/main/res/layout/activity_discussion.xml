@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".View.Discussion.DiscussionActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:elevation="10dp"
+        android:minHeight="?attr/actionBarSize"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="?attr/colorPrimaryDark" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:elevation="10dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/senderLayout"
+        android:background="@color/white">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:hint="@string/tb_text"
+            android:layout_margin="10dp"
+            android:background="@color/white"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:paddingLeft="10dp">
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_insert_emoticon_black_36dp"
+                android:scaleType="fitXY"
+                android:background="@color/white"
+                android:layout_margin="5dp"
+                android:clickable="false" />
+            <ImageButton
+                android:id="@+id/photobutton"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_photo_black_24dp"
+                android:scaleType="fitXY"
+                android:background="@color/white"
+                android:layout_margin="5dp"/>
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_attach_file_black_36dp"
+                android:scaleType="fitXY"
+                android:background="@color/white"
+                android:layout_margin="5dp"/>
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/position_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_margin="5dp"
+                    android:text="Position"
+                    />
+        </LinearLayout>
+        <ImageButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageButton"
+            android:src="@drawable/ic_send_black_48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:layout_margin="10dp"/>
+
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/message_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@id/senderLayout"
+        android:background="@color/colorSecondary"/>
+
+</RelativeLayout>

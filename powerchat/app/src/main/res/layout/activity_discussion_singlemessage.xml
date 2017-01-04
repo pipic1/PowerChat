@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_margin="15dp"
+        android:id="@+id/singleMessageLayout"
+        android:layout_width="wrap_content"
+        android:minWidth="150dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:background="@color/bubbleColorBack"
+        android:elevation="5dp"
+        android:layout_gravity="right"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/author_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Author NAme"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/com_facebook_blue"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:visibility="visible"
+        />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:text="Message example"
+        android:textSize="15dp"
+        android:layout_margin="5dp"
+        android:textColor="@android:color/black"
+        android:elegantTextHeight="true"
+        android:textIsSelectable="true"/>
+
+    <ImageView
+        android:id="@+id/photoview"
+        android:layout_width="500dp"
+        android:layout_height="250dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/dateSingleMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:text="09/03/2016"
+        android:layout_gravity="right"/>
+
+    <TextView
+        android:id="@+id/position_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="position adresse"
+        android:layout_marginRight="5dp"
+        android:layout_gravity="right"
+        android:visibility="gone"/>
+
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <!-- on peut mettre des icones assez facilement-->
+
+        <item android:title="Amis">
+            <menu>
+                <item
+                    android:id="@+id/nav_third_fragment"
+                    android:title="Contact" />
+            </menu>
+        </item>
+
+
+        <item android:title="Sujet favoris">
+            <menu>
+                <item
+                    android:title="Sujet 1" />
+                <item
+                    android:title="Sujet 1" />
+                <item
+                    android:title="Sujet 1" />
+
+            </menu>
+        </item>
+
+        <item android:title="Profil">
+            <menu>
+                <item
+                    android:id="@+id/se_login"
+                    android:title="Se connecter" />
+                <item
+                    android:id="@+id/se_logout"
+                    android:title="Se déconnecter" />
+            </menu>
+        </item>
+    </group>
+</menu>
